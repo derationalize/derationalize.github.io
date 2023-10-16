@@ -15,16 +15,41 @@
 
 				}
 
-		#boxproject{
+		
+		.box{
+			display:inline-block;
+			position:relative;
 			width:250px;
 			height:250px;
-			background-image:url(https://cdn.shopify.com/s/files/1/0484/4414/5817/files/Teacoursepic_6_480x480.png?v=1669072082);
+			margin:45px;
+			position:relative;
 			background-size:contain;
 			background-repeat:no-repeat;
-			border: 5px solid #926100;
-			position:absolute;
-			left:90px;
-			top:180px;
+			border: 5px solid #926101;
+			top:65px;
+		}
+
+		#animation{
+			background-image:url(https://i.pinimg.com/736x/02/40/b8/0240b8b6aab1b754060aa40316aad937.jpg);
+			background-size:contain;
+			background-repeat: repeat;
+		}
+
+		#box{
+			background-image:url(https://cdn.shopify.com/s/files/1/0484/4414/5817/files/Teacoursepic_6_480x480.png?v=1669072082);
+			background-size:contain;
+			background-repeat: no-repeat;
+		}
+
+		.text{
+			width:100%;
+			position:relative;
+			top:105%;
+			height:20px;
+			text-align:center;
+			color:darkgoldenrod;
+			font-family: 'Gamja Flower', cursive;
+			font-size: 40px;
 		}
 
 		body {
@@ -37,9 +62,23 @@
 
 <body>
 	<h1> Projects </h1>
-<a href="box.html">
-	<div id="boxproject"></div>
+
+<left>
+	<a href="box.html">
+		<div id="box" class="box">
+			<div class="text">Box Project</div>
+		</div>
 	</a>
+
+	<a href="animation.html">
+		<div id="animation" class="box">
+			<div class="text">Animation</div>
+		</div>
+	</a>
+
+
+</left>
+
 </body>
 
 

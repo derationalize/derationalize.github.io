@@ -5,23 +5,29 @@
 
 	<style type="text/css">
 
-		#isabella{
+
+		#animation{
 			width:100px;
 			height:100px;
-			background-color:blue;
-			border:10px solid black;
-			animation-name:fred;
-			animation-duration:3s;
+			background-image:url(https://i.pinimg.com/564x/62/9e/54/629e5489aa4e1624ae28adf6a5071609.jpg);
+			background-size:contain;
+			border:5px orange;
+			animation-name:poprocks;
+			animation-duration:2s;
 			animation-iteration-count: infinite;
 			position:absolute;
+			top:150px;
 		}
 
-		@keyframes fred {
+		@keyframes poprocks {
 
 			0%{
 				width:100px;
 				height:100px;
+				transform:rotate(360deg);
+				border:20px dashed orange;
 				left:0px;
+				top:200px;
 
 			}
 
@@ -30,36 +36,50 @@
 				height:300px;
 				border-radius:50%;
 				transform:rotate(360deg);
-				background-color:yellow;
-				border:20px dotted magenta;
+				border:10px dashed orange;
 				left:500px;
+				top:300px;
 
 			}
 
 			50%{
+				width:100px;
+				height:100px;
+				transform:rotate(360deg);
+				left:1200px;
+				top:200px;
+
+			}
+
+			75%{
 				width:300px;
 				height:300px;
 				border-radius:50%;
 				transform:rotate(360deg);
 				background-color:red;
-				border:20px dotted magenta;
+				border:10px dashed orange;
 				left:500px;
+				top:300px;
 
 			}
 
 			100%{
 				width:100px;
-			height:100px;
-			left:1200px;
+				height:100px;
+				transform:rotate(360deg);
+				border:20px dashed orange;
+				left:0px;
+				top:200px;
 
 			}
 		}
 		
 	</style>
 </head>
-<body>
+<body style="background-color:lightcyan;">
 
-<div id="isabella"></div>
+
+<div id="animation"></div>
 
 </body>
 </html>
