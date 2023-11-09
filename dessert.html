@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+		#exit{
+			width:65px;
+			height:65px;
+			opacity: 0.75;  
+			background-image:url(backArrow.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+		h1{
+			color:steelblue;
+			font-family: 'Gamja Flower', cursive;
+			font-size: 40px;
+
+		}
+	</style>
+</head>
+
+
+<body style="background-color:aliceblue;">
+
+<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+
+<audio id="sound" src="chomp.mp3"></audio>
+
+<center>
+<h1>Baklava - Try One! </h1>
+</center>
+
+	<script type="text/javascript">
+		
+		function makeBaklava () {
+			var baklava = document.createElement("div");
+			document.body.appendChild(baklava);
+			baklava.style.width="225px";
+			baklava.style.height="150px";
+			baklava.style.repeat="no-repeat";
+			baklava.style.backgroundImage="url(baklava.png)";
+			baklava.style.backgroundSize="contain";
+			baklava.style.display="inline-block";
+			
+			baklava.addEventListener("click",
+				function(){
+					baklava.style.opacity="0";
+					var left = 0; 
+						sound.play()
+
+				})
+			}
+
+		setInterval(makeBaklava,90)
+
+	</script>
+
+</body>
+
+
+</html>
