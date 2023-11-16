@@ -3,23 +3,66 @@
 
 
 <head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+
 	<style type="text/css">
 
-		#sewer{
-			width:200px;
-			height:200px;
-			background-image:url(https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg?w=1029&webp=1);
+		#exit{
+			width:80px;
+			height:80px;
+			opacity: 1;  
+			background-image:url(whitearrow.png);
 			background-size:contain;
 			background-repeat:no-repeat;
 
 		}
 
+		#sewer{
+			position: relative;
+			width:150px;
+			height:150px;
+			left:1100px;
+			top:420px;
+			background-image:url(sewer.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+
+
 		body {
- 		 background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D');
+ 		 background-image: url('https://loving-newyork.com/wp-content/uploads/2023/05/200318140126009.jpg');
  		 background-size:cover;
  		 background-attachment:fixed;
  		 background-repeat:no-repeat;
 
+		}
+
+		.rat{
+			position:relative;
+			width:150px;
+			height: 150px;
+/*			background-color:red; */
+			position:absolute;
+			opacity:0;
+			background-image:url(rat.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+					}
+
+		.text{
+			position:relative;
+			top:10px;
+			text-align: center;
+			color:midnightblue;
+			font-family: 'Gamja Flower', cursive;
+			font-size: 75px;
+			opacity:0;
 		}
 
 	</style>
@@ -28,19 +71,84 @@
 
 <body>
 
-<center>
+<div class="text" id="hello"><strong>Motivational Rats Just For You! <3</strong></div>
+
+<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+
+<div class="rat" id="rat1"></div>
+<div class="rat" id="rat2"></div>
+<div class="rat" id="rat3"></div>
+<div class="rat" id="rat4"></div>
+<div class="rat" id="rat5"></div>
+<div class="rat" id="rat6"></div>
+<div class="rat" id="rat7"></div>
+
 <div id="sewer"></div>
-</center>
+
 
 <script type="text/javascript">
+	var counter = 0;
 
-	var counter =0
+	sewer.addEventListener("click", function(){ 
+		counter =counter+1;
 
-	sewer.addEventListener("click", function(){
+		if(counter==1){
+					rat1.style.opacity = "1"
+					hello.style.opacity = "1"
+					rat1.style.top = "600px"
+					rat1.style.left = "800px"
+					hello.style.borderStyle = " solid"
+					hello.style.backgroundColor = "lightblue"
 
-		sewer.style.backgroundImage = "url(sewer.jpg)"
+
+		}
+
+		if(counter==2){
+					rat2.style.opacity = "1"
+					rat2.style.top = "500px"
+					rat2.style.left = "600px"
+
+		}
+
+		if(counter==3){
+					rat3.style.opacity = "1"
+					rat3.style.top = "590px"
+					rat3.style.left = "1300px"
+
+		}
+
+		if(counter==4){
+					rat4.style.opacity = "1"
+					rat4.style.top = "500px"
+					rat4.style.left = "1000px"
+
+		}
+
+		if(counter==5){
+					rat5.style.opacity = "1"
+					rat5.style.top = "669px"
+					rat5.style.left = "500px"
+
+		}
+
+		if(counter==6){
+					rat6.style.opacity = "1"
+					rat6.style.top = "620px"
+					rat6.style.left = "100px"
+
+		}
+
+		if(counter==7){
+					rat7.style.opacity = "1"
+					rat7.style.top = "550px"
+					rat7.style.left = "350px"
+
+		}
 
 	})
+
 
 </script>
 
