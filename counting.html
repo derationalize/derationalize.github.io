@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+
+
+	<style type="text/css">
+		
+		#exit{
+			width:50px;
+			height:50px;
+			opacity: 0.65;
+			background-image:url(backArrow.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+
+		h1 {
+				text-align: center;
+				color:#024624;
+				font-family: 'Gamja Flower', cursive;
+				font-size: 50px;
+
+		}
+
+		button {
+				text-align: center;
+				color:#4A895F;
+				font-family: 'Gamja Flower', cursive;
+				font-size: 30px;
+				background-color:#7EE7C3;
+				border-color:#4A895F;
+				border
+
+		}
+
+		.eq{
+			width:100px;
+			height:100px;
+			background-image:url(poppy.png);
+			background-size:contain;
+			display:inline-block;
+			margin-left: 8px;
+			margin-right: 8px;
+			margin-top: 20px;
+		}
+
+	</style>
+
+	
+
+</head>
+
+
+<body style="background-color:#E6FFEB;">
+
+	<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+
+	<audio id="sound" src="VBS.mp3"></audio>
+
+	<center><h1>Spring Is Coming!</h1>
+	<button id="boom">Smell The Air</button>
+	</center>
+
+<script type="text/javascript">
+	
+	function makeEQ (){
+		var eq = document.createElement("div")
+		document.body.appendChild(eq);
+		eq.classList.add("eq")
+		
+	}
+
+	for (var counter =0; counter<11; counter=counter+1)
+	{makeEQ()}
+
+
+	boom.addEventListener("click",
+		function(){
+		sound.play()
+		makeEQ()
+
+})
+
+
+
+</script>
+
+<div class="eq"></div>
+
+</body>
+
+
+
+
+
+
+
+</html>
