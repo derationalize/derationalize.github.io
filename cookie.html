@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		
+		#exit{
+			width:55px;
+			height:55px;
+			opacity: 0.75;  
+			background-image:url(backArrow.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+		h1{
+			color:steelblue;
+			font-family: 'Gamja Flower', cursive;
+			font-size: 40px;
+
+		}
+
+
+		.topping{
+			width:75px;
+			height:75px;
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+		#choco{
+			background-image:url(choco.png);
+		}
+
+		#mandm{
+			background-image:url(mandm.png);
+		}
+
+		#nuts{
+			background-image:url(marshmellow.png);
+
+		}
+
+		#cookie{
+			width:700px;
+			height:700px;
+			background-image:url(cookie.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+	</style>
+
+</head>
+
+
+<body style="background-color:#cdebee;">
+
+
+<center>
+	<h1> Decorate A Cookie! </h1>
+</center>
+	<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+<center>
+	<div id="choco" class="topping"></div>
+	<div id="mandm" class="topping"></div>
+	<div id="nuts" class="topping"></div>
+
+	<div id="cookie"></div>
+</center>
+
+	<script type="text/javascript">
+		var toppings;
+
+		function makeTopping(){
+			var lala = document.createElement("div");
+			document.body.appendChild(lala);
+			lala.classLists.add("toppings");
+			lala.innerText = toppings
+
+		}
+
+
+		nuts.addEventListener("click", 
+			function (){
+			toppings = "marshmellow.png"
+			console.log(toppings)
+
+		})
+
+		mandm.addEventListener("click", 
+			function (){
+			toppings = "mandm.png"
+			console.log(toppings)
+
+		})
+
+		choco.addEventListener("click", 
+			function (){
+			toppings = "choco.png"
+			console.log(toppings)
+
+		})
+
+		cookie.addEventListener("click", 
+
+			function makeDiv(event){
+			var facepart = document.createElement('div');
+			document.body.appendChild(facepart);
+			facepart.classList.add('topping')
+			facepart.style.position = "absolute"
+			facepart.style.left = event.clientX-50 +"px"
+			facepart.style.top = event.clientY-50 +"px"
+			facepart.style.backgroundImage = "url("+toppings +")"
+
+
+
+			})
+			
+		
+	</script>
+
+
+
+
+</body>
+</html>
