@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		
+		#exit{
+			width:55px;
+			height:55px;
+			opacity: 0.75;  
+			background-image:url(backArrow.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+		h1{
+			color:hotpink;
+			font-family: 'Gamja Flower', cursive;
+			font-size: 40px;
+
+		}
+
+
+		.topping{
+			width:175px;
+			height:175px;
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+		#choco{
+			background-image:url(holiday.png);
+		}
+
+		#mandm{
+			background-image:url(snowflake.png);
+		}
+
+		#nuts{
+			background-image:url(snowman.png);
+
+		}
+
+		#cookie{
+			width:1000px;
+			height:1000px;
+			background-image:url(Card.jpg);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+	</style>
+
+</head>
+
+
+<body style="background-color:#FFEDF8;">
+
+
+
+	<h1> Create A Holiday Card</h1>
+
+	<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+
+	<div id="choco" class="topping"></div>
+	<div id="mandm" class="topping"></div>
+	<div id="nuts" class="topping"></div>
+
+	<div id="cookie"></div>
+
+
+	<script type="text/javascript">
+		var toppings;
+
+		function makeTopping(){
+			var lala = document.createElement("div");
+			document.body.appendChild(lala);
+			lala.classLists.add("toppings");
+			lala.innerText = toppings
+
+		}
+
+
+		nuts.addEventListener("click", 
+			function (){
+			toppings = "snowman.png"
+			console.log(toppings)
+
+		})
+
+		mandm.addEventListener("click", 
+			function (){
+			toppings = "snowflake.png"
+			console.log(toppings)
+
+		})
+
+		choco.addEventListener("click", 
+			function (){
+			toppings = "holiday.png"
+			console.log(toppings)
+
+		})
+
+		cookie.addEventListener("click", 
+
+			function makeDiv(event){
+			var facepart = document.createElement('div');
+			document.body.appendChild(facepart);
+			facepart.classList.add('topping')
+			facepart.style.position = "absolute"
+			facepart.style.left = event.clientX-50 +"px"
+			facepart.style.top = event.clientY-50 +"px"
+			facepart.style.backgroundImage = "url("+toppings +")"
+
+
+
+			})
+			
+		
+	</script>
+
+
+
+
+</body>
+</html>
