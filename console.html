@@ -6,19 +6,33 @@
 
 	<style type="text/css">
 		
-
+		.Bret {
+			width: 100px;
+			height: 100px;
+			background-image:url(https://assets.vogue.com/photos/62c5e16903b6d9a4fdd6b839/1:1/w_1332,h_1332,c_limit/20220618_VOGUE_BRENT-FAIYAZ_LOOK_03_090.jpg);
+			background-size:cover;
+			background-position: center;
+		}
 	</style>
-
-
 </head>
 <body>
 
 <script type="text/javascript">
+
+
+	function makeBret (){
+		var bret = document.createElement("div");
+		document.body.appendChild(bret);
+		bret.classList.add("Bret");
+		
+	}
+
+	for (var christian =0; christian<100; christian=christian+1)
+	{makeBret()}
 	
-	document.addEventListener("keypress",
-		function(event){
-			console.log(event)
-		})
+
+	
+
 </script>
 
 
