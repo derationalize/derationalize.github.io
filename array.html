@@ -10,6 +10,16 @@
 
 	<style type="text/css">
 		
+			#exit{
+			width:65px;
+			height:65px;
+/*			opacity: 0.05; */ 
+			background-image:url(whitearrow.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
 
 			h1 {
 				text-align: center;
@@ -27,22 +37,63 @@
 				font-size: 30px;
 		}
 
+			#solar {
+			width:500px;
+			height:500px;
+			position: relative;
+			background-size:contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		
+		}		
+
 	</style>
 </head>
 
 <body style="background-color:#25065e">
 
-<h1>Choose a celestial body</h1>
+
+
+<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+
+<h1>click to find out what celestial body you are</h1>
+<center>
+<div id="solar"></div>
+</center>
+<div id="persons"></div>
 <script type="text/javascript">
 	
 	var people = ["UY Scuti","Orion Nebula","Kepler 16-B", "Alpha Centauri AB","Pillars of Creation", "Halley's Comet", "Supermassive Black Hole","Saturn","Andromeda"]
 
-	var x = Math.round(Math.random()*8); 
+	var star = ["url(https://static.wikia.nocookie.net/cards-the-universe-and-everything/images/5/5f/API_UY_Scuti.jpg/revision/latest?cb=20230830045304)", "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/1200px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg)", "url(https://upload.wikimedia.org/wikipedia/commons/e/eb/Kepler-16.jpg)", "url(https://cdn.esahubble.org/archives/images/screen/potw1635a.jpg)", "url(https://stsci-opo.org/STScI-01GF42DS111HN0D9TEKQDM3Y1W.png)", "url(https://d2pn8kiwq2w21t.cloudfront.net/images/imagescomethalley-544-399.width-1024.jpg)","url(https://upload.wikimedia.org/wikipedia/commons/c/cf/Black_hole_-_Messier_87.jpg)","url(https://c02.purpledshub.com/uploads/sites/41/2023/08/How-to-see-Saturn-in-opposition.jpg?w=1029&webp=1)","url(https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg)"];
+
+function randomNumber() {
+        return Math.floor(Math.random() * 8);
+
+    }
+
+    var x; 
+
+
+        var sun = document.getElementById('sun');
+
+        document.addEventListener("click", function() {
+            x = randomNumber();
+            console.log(x);
+            persons.innerText = people[x];
+            solar.style.backgroundImage = star[x];
+
+        })
+
+	//var x = Math.round(Math.random()*8); //
 
 	console.log(people[x]);
+	console.log(star[x]);
 
 
-	document.write(people[x]); 
+//	document.write(people[x]); //
 
 
 
