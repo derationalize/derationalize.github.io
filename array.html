@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
-
-
-<head>
+<!-- saved from url=(0062)file:///Users/c27ar/Desktop/derationalize.github.io/array.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./array_files/css2" rel="stylesheet">
 
 	<style type="text/css">
 		
@@ -20,13 +18,20 @@
 
 		}
 
+			#country {
+			width:250px;
+			height:200px;
+			position: relative;
+			background-size:contain;
+			top:17%;
+			left:2%;
+		}		
 
 			h1 {
 				text-align: center;
 				color:#eae1fc;
 				font-family: 'Gamja Flower', cursive;
 				font-size: 50px;
-				
 
 		}
 			
@@ -36,43 +41,31 @@
 			color:#eae1fc;
 				font-family: 'Gamja Flower', cursive;
 				font-size: 30px;
-				margin: 100px;
 		}
-
-			#solar {
-			width:550px;
-			height:550px;
-			position: relative;
-			background-size:contain;
-			background-position: center;
-			background-repeat: no-repeat;
-		
-		}		
 
 	</style>
 </head>
 
-<body style="background-color:#69567C">
+<body style="background-color:#25065e">
 
 
 
-<a href="projects.html">
+<a href="file:///Users/c27ar/Desktop/derationalize.github.io/projects.html">
 		<div id="exit"></div>
 		</a>
 
-<h1>click to find out what part of space you embody</h1>
-<center>
+<h1>Choose a celestial body</h1>
+
 <div id="solar"></div>
-</center>
 <div id="persons"></div>
 <script type="text/javascript">
 	
-	var people = ["Sombrero Galaxy: you are a foodie! you love to enjoy a good movie and are very passionate about really amazing stories, but make sure to take your head out of the clouds sometimes","Orion Nebula: you are a blast to hang around but in reality you need time on your own to rewind and relax","Kepler 16-B: sometimes you feel as if you are in your own world sometimes, and it may be hard to connect to people, but reach out! friends are closer than they may seem", "The Ghost Nebula: you often feel as if you don't belong anywhere, as you tend to act like a wallflower when in large social settings. but don't worry, you are not hidden from the world, just reach out and make yourself heard!","Pillars of Creation: you are elegant and posh, and only live for the high things in life, so don't be afraid of getting messy sometimes!", "Halley's Comet: you love your friends, but tend to avoid large gatherings and parties. you are loyal and trusting, but make sure that you take some me-time as well!", "Black Hole: you are the life of the party! you know how to have a good time, but in the future try to heir further on the side of caution because being too reckless can hurt you in the long run.","Saturn: you are really down to earth and exciting to hang around, always up to something wacky! you are overall very chill, and you are pretty well respected","Andromeda: you are stubborn and true to yourself, and you won't be taken down by the people in your life, but sometimes, compromise is just as important"]
+	var people = ["UY Scuti","Orion Nebula","Kepler 16-B", "Alpha Centauri AB","Pillars of Creation", "Halley's Comet", "Supermassive Black Hole","Saturn","Andromeda"]
 
-	var star = ["url(SOMGAL.png)", "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/1200px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg)", "url(https://upload.wikimedia.org/wikipedia/commons/e/eb/Kepler-16.jpg)", "url(https://i.pinimg.com/564x/8c/36/05/8c360572f895b85230803eb8ef2cc299.jpg)", "url(https://stsci-opo.org/STScI-01GF42DS111HN0D9TEKQDM3Y1W.png)", "url(https://d2pn8kiwq2w21t.cloudfront.net/images/imagescomethalley-544-399.width-1024.jpg)","url(https://i.pinimg.com/564x/28/ad/14/28ad1487a23f7ad586e1d604a26d32f8.jpg)","url(https://c02.purpledshub.com/uploads/sites/41/2023/08/How-to-see-Saturn-in-opposition.jpg?w=1029&webp=1)","url(https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg)"];
+	var star = ["url(https://static.wikia.nocookie.net/cards-the-universe-and-everything/images/5/5f/API_UY_Scuti.jpg/revision/latest?cb=20230830045304)", "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/1200px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg)", "url(https://upload.wikimedia.org/wikipedia/commons/e/eb/Kepler-16.jpg)", "url(https://cdn.esahubble.org/archives/images/screen/potw1635a.jpg)", "url(https://stsci-opo.org/STScI-01GF42DS111HN0D9TEKQDM3Y1W.png)", "url(https://d2pn8kiwq2w21t.cloudfront.net/images/imagescomethalley-544-399.width-1024.jpg)","url(https://upload.wikimedia.org/wikipedia/commons/c/cf/Black_hole_-_Messier_87.jpg)","url(https://c02.purpledshub.com/uploads/sites/41/2023/08/How-to-see-Saturn-in-opposition.jpg?w=1029&webp=1)","url(https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg)"];
 
 function randomNumber() {
-        return Math.floor(Math.random() * 8);
+        return Math.floor(Math.random() * 9);
 
     }
 
@@ -92,7 +85,6 @@ function randomNumber() {
 	//var x = Math.round(Math.random()*8); //
 
 	console.log(people[x]);
-	console.log(star[x]);
 
 
 //	document.write(people[x]); //
@@ -104,5 +96,5 @@ function randomNumber() {
 
 
 </script>
-</body>
-</html>
+
+</body></html>
