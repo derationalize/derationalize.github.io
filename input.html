@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+	<style type="text/css">
+		
+		#exit{
+			width:55px;
+			height:55px;
+			opacity: 0.75;  
+			background-image:url(backArrow.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+		h1 {
+				text-align: center;
+				color:#ff748c;
+				font-family: 'Gamja Flower', cursive;
+				font-size: 50px;
+				}
+
+		#answer {
+				text-align: center;
+				color:#ff8da1;
+				font-family: 'Gamja Flower', cursive;
+				font-size: 25px;
+				}
+
+
+	#button {
+   				 background-color: #ff7373; 
+  				  color: #fff;
+  				  padding: 10px 20px;
+  				  font-family: 'Gamja Flower', cursive;
+  				  border: none;
+  				  border-radius: 5px;
+  				  cursor: pointer;
+  				  font-size: 20px;
+  				  transition: background-color 0.3s ease;
+				}
+
+	#input[type="text"] {
+    			width: 100%;
+   				 padding: 10px;
+    			 margin-top: 5px;
+   				 border: 2px solid #ffcccc; 
+    			 border-radius: 5px;
+   				 box-sizing: border-box;
+		}
+			
+		}
+
+</style>
+</head>
+
+
+<body style="background-color:#fff3f5;">
+
+<a href="projects.html">
+		<div id="exit"></div>
+		</a>
+<center>
+<h1>Enter a name to see your compatibility with them <3 <h1>
+<input id="enter"></input>
+<button id="button">Submit</button>
+<div id="answer"></div>
+
+<script type="text/javascript">
+	button.addEventListener("click", function(){
+		console.log(enter.value)
+		if(enter.value=="Ayla"){
+			answer.innerText = "She's the one for you!"
+		}
+		else{
+			answer.innerText = "You're " + Math.floor(Math.random()*100) + " percent compatible"
+		}
+
+	})
+
+</script>
+</center>
+</body>
+</html>
