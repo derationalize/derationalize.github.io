@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo&family=Gamja+Flower&display=swap" rel="stylesheet">
+	
+<head>
+	<style type="text/css">
+		
+
+		h1 {
+				text-align: center;
+				color:#ceb6e2;
+				font-family: 'Gamja Flower', cursive;
+				font-size: 60px;
+				}
+
+		body{
+			background-color:#ffd2e9;
+			font-size:40px;
+			text-align: center;
+			color:#f4cae5;
+			font-family: 'Gamja Flower',
+			cursive;
+		}
+
+		#rat1{
+			position:relative;
+			width:150px;
+			height: 150px;
+/*			background-color:red; */
+			position:absolute;
+			opacity:0;
+			background-image:url(rat.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+
+					}
+
+	</style>
+</head>
+
+<body>
+<h1>Click to get a random color~! <h1>
+
+<div class="rat" id="rat1"></div>
+
+	<script type="text/javascript">
+
+		document.addEventListener("click", function(){
+			var x = Math.floor(Math.random()*255);
+			var y =	Math.floor(Math.random()*255);
+			var z = Math.floor(Math.random()*255);
+			document.body.style.backgroundColor="rgb(" + x + "," + y + "," + z + ")"
+			document.body.innerText = "rgb values (" + x + ", " + y + ", " + z + ")"
+
+		})
+	</script>
+
+
+</body>
+</html>
