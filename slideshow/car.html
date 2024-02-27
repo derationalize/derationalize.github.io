@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 
+
+	 <style type="text/css">
+
+	 	#car{
+	 		width:240px;
+	 		height:90px;
+	 		background-image:url(nuts.png);
+	 		background-size:contain;
+	 		position:relative;
+	 	}
+
+	 </style>
+
+</head>
+<body>
+
+	<div id="car"></div>
+
+	<script type="text/javascript">
+		var left =0;
+
+		document.addEventListener("keypress", function(event){
+				
+				if (event.keyCode == 100)
+					{
+					left = left +20;
+					console.log (left);
+					car.style.left = left + "px";
+				}
+
+				if (event.keyCode == 97)
+					{
+					left = left -20;
+					console.log (left);
+					car.style.left = left + "px";
+				}
+		})
+
+	</script>
+
+</body>
+</html>
